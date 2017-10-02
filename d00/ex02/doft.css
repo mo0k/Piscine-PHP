@@ -15,7 +15,7 @@ header {
 	margin : 20px auto 0px auto;
 	border-radius: 10px;
 	background-color: rgb(145,145,145);
-	 box-shadow: 8px 8px 12px #000
+	box-shadow: 8px 8px 12px #000
 
 }
 
@@ -56,6 +56,7 @@ header img#loupe
 
 nav
 {
+	box-shadow: 8px 8px 12px #000;
 	padding-top: 5px;
 	background-color: rgb(145,145,145);
 	border-radius: 10px;
@@ -96,6 +97,7 @@ section {
 	display: inline-block;
 	border-radius: 10px;
 	float: left;
+	box-shadow: 8px 8px 12px #000;
 }
 
 section img{
@@ -123,6 +125,7 @@ section img{
 }
 
 div#input{
+	box-shadow: 8px 8px 12px #000;
 	width: 500px;
 	height: 160px;
 	float: left;

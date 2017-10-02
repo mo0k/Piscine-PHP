@@ -1,33 +1,56 @@
 #!/usr/bin/php
-<?PHP
-
-function ft_split($str)
+<?php
+function ft_split($string)
 {
-	return (array_filter(explode(' ', $str)));
+	$tab = explode(" ", $string);
+	sort($tab);
+	return($tab);
 }
-
-	if ($argc < 2)
-		return ;
-	$tab1 = array();
-	$tab2 = array();
-	$i = 1;
-	while ($i < $argc)
+if ($argc != 1)
+{
+	$i = 0;
+	$all_elem = array();
+	print_r("nbr arg:".$argc);
+	while (++$i < $argc)
 	{
-		$j = 0;
-		$tab2 = ft_split($argv[$i]);
-		while ($j < count($tab2))
-			array_push($tab1, $tab2[$j++]);
-		$i++;
+			print_r($argv[$i]);
+			echo "\n";
+			$tab = ft_split($argv[$i]);
+			$all_elem = array_merge($all_elem, $tab);
 	}
-	natcasesort($tab1);
-	for ($i = 0 ; $i < 2 ; $i++)
+	print_r($all_elem);
+	foreach ($all_elem as $elem)
 	{
-		foreach ($tab1 as $elem) {
-			if ($i == 0 && !is_numeric($elem))
-				print($elem."\n");
-			else if ($i == 1 && is_numeric($elem))
-				print($elem."\n");
-		}
+		if(is_numeric($elem) == TRUE)
+			$numeric[] = $elem;
 	}
-
+	sort($numeric, SORT_STRING);
+	foreach ($all_elem as $elem)
+	{
+		if(ctype_alpha($elem) == TRUE)
+			$string[] = $elem;
+	}
+	sort($string, SORT_NATURAL | SORT_FLAG_CASE);
+	foreach ($all_elem as $elem)
+	{
+		if(ctype_alpha($ele) == FALSE && is_numeric($elem) == FALSE)
+			$ascii[] = $elem;
+	}
+	sort($ascii);
+	foreach($string as $element)
+	{
+		echo $element;
+		echo "\n";
+	}
+	foreach($numeric as $element)
+	{
+		echo $element;
+		echo "\n";
+	}
+	foreach($ascii as $element)
+	{
+		echo $element;
+		echo "\n";
+	}
+}
 ?>
