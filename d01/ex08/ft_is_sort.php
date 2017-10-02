@@ -2,16 +2,16 @@
 
 function ft_is_sort($tab)
 {
-	$i = 1;
-	$temp = $tab[0];
-	while ($i < count($tab))
-	{
-		if ($temp > $tab[$i])
-			return (0);
-		$temp = $tab[$i];
-		++$i;
-	}
-	return (1);
+	$temp1 = $tab;
+	$temp2 = $tab;
+
+	sort($temp1);
+	asort($temp2);
+	if ($temp1 === $tab)
+		return (1);
+	if ($temp2 === $tab)
+		return (1);
+	return (0);
 }
 
 ?>
