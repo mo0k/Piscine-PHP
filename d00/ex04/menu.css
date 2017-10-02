@@ -2,32 +2,54 @@ html{
 		background-color:rgb(220, 220, 220);
 }
 
-#main /* Ensemble du menu */
-{
-        font-size : 12px; /* hauteur du texte : 12 pixels */
+#menu, #menu ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+}
+#menu {
+        text-align: center;
+}
+#menu li {
+        display: inline-block;
+        width: 100px;
+        background-color: rgb(0, 128, 255);
+        text-align: center;
+        border-radius:8px 8px 0 0
 }
 
-#main, #main ul /* Liste */     
-{
-        padding : 0; /* pas de marge intérieure */
-        margin : 0; /* ni extérieure */
-        list-style : none; /* on supprime le style par défaut de la liste */
-        line-height : 21px; /* on définit une hauteur pour chaque élément */
-        text-align : center; /* on centre le texte qui se trouve dans la liste */
+#menu ul li {
+        display: inherit;
+        border-radius:0;
+        background-color: rgb(51, 153, 255);
 }
 
-#main a{
-		display:block;
-		padding:0;
-		background: rgb(200, 200, 200);
-		color:#fff;
-		text-decoration: none;
-		width: 150px;
+#menu ul li:last-child{
+        border-radius:0 0 8px 8px;
 }
 
-#main li /* Elements des listes */      
-{ 
-        float : left; 
-        /* pour IE qui ne reconnaît pas "transparent" */
-        border-right : 1px solid #fff; /* on met une bordure blanche à droite de chaque élément */
+#menu a {
+        text-decoration: none;
+        display: block;
+        color:#000;
+}
+#menu ul {
+    position: absolute;
+    left: -999em;
+    text-align: left;
+    z-index: 1000;
+}
+#menu li:hover ul {
+    left: auto;
+}
+
+#menu li:hover li a{
+color:#fff;
+text-transform:inherit;
+}
+
+#menu li:hover a, #menu li li:hover a{
+color:#000;
 }
