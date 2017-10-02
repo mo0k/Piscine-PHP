@@ -1,7 +1,24 @@
-		html{background-color:rgb(220, 220, 220);}
-		h1{font-size: 42%;margin: 0 10%;width: 80.0%;}
-		table{margin:2.0% auto 0 auto;overflow: hidden;}
-		td{border:1% solid black;width:6.0%;height:6.0%;padding:0;}
+		html{width:100%;background-color:rgb(220, 220, 220);}
+		h1{font-size: 2vmin;margin: 0 10%;width: 80.0%;text-align: center}
+		table
+		{
+			border-collapse: collapse;
+			border-bottom : 3px solid black;
+			border-right : 3px solid black;
+			box-shadow : 2px 2px 2px black;
+			padding : none;
+			margin : auto;
+			width : 80%;
+			margin-top : 1%;
+			margin-left : 1%;
+			margin-right : 10%;
+		}
+		td{
+			width:5.5%;
+			height: 10%;
+			border: 1px solid rgb(220, 220, 220);;
+		}
+		
 		td.violet{background-color:rgb(171, 145, 255)}
 		td.orange{background-color:rgb(255, 197, 145)}
 		td.orange_light{background-color:rgb(255, 223, 143)}
@@ -15,13 +32,29 @@
 		td.blue{background-color:rgb(145, 223, 255)}
 		td.transparent{border-style: hidden;}
 		div{margin:0;padding:0;text-align: center;}
-		.symbol{width:5.8%;height:2.0%;margin:0;font-size: 2.5%;;text-align: center;vertical-align: top}
-		.num_element{float:left;vertical-align: bottom;margin:.5% 0 0 .2%;font-size: 1.2%}
-		.atomic_weight{width:5.8%;text-align: right;margin:0 0 0 0;font-size: 1.2%}
+		.symbol
+		{
+			background : none;
+			font-size : 2vmin;
+			text-align : center;
+		}
+		.num_element
+		{
+			background : none;
+			text-align : left;
+			font-size : 1vmin;
+		}
+		.atomic_weight
+		{
+			background : none;
+			text-align : right;
+			font-size : 1vmin;
+		}
 		.float_right{float:right;}
 		.float_left{float:left;}
 		.align_bottom{vertical-align: bottom}
 		.align_top{vertical-align: top}
 		.align_middle{vertical-align: middle}
 		div#block_img{}
+		div.content{width:80%;margin:0 auto;}
 		img#face{width: 20.0%;margin:1.0% auto;}

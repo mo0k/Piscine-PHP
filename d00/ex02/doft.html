@@ -12,7 +12,7 @@
 				<div class="mini"></div>
 				<a href="http://www.relaischateaux.com"><img src="resources/close.gif" title="Déconnecter" alt="Déconnecter" class="mini"/></a>
 			</div>
-			<img id="loupe" src="resources/loupe.png" class="float_right"/>
+			<img id="loupe" src="resources/loupe.png" title="loupe" alt="loupe" class="float_right"/>
 		</header>
 		<div id="principal">
 			<nav id="first_nav">
@@ -33,7 +33,12 @@
 				</div>
 			</nav>
 			<section>
-				<img src="resources/cluster.jpg" title="Cluster" alt="Cluster"/>
+				<map name="maps" id="maps">
+					<area shape="poly" coords="852,340,1050,348,1050,491,852,460" HREF="http://www.apple.com">
+					<area shape="poly" coords="352,350,430,370,440,430,480,400,480,590,352,580" HREF="http://www.ikea.com">
+				</map>
+				<img src="resources/cluster.jpg" title="Cluster" alt="
+				Cluster" usemap="#maps"/> == $0
 			</section>
 			<nav id="last_nav" class="float_left">
 				<div id="book"><img src="resources/book.png" title="Lire" alt="Lire"/></div>
@@ -41,7 +46,7 @@
 				<div id="wall" title="bricks" alt="bricks"></div>
 			</nav>
 		</div>
-		<div id="input">
+		<div id="input" alt="box_message" title="box_message">
 			<p>Vous <span class="special1">entrez</span> alors dans une grande piece remplie d'<span class="special2">ordinateurs</span>...<br/>
 			<span class="italic">-Bonjour, vous êtes nouveau ici ?</span></p>
 			<div>
