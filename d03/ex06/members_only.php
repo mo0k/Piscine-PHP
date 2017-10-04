@@ -1,7 +1,7 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
 	<title>Members</title>
 	<style>
 		body{background:rgb(110,110,110);}
@@ -18,18 +18,20 @@
 </head>
 	<body>
 		<?php
-		if (!isset($_POST["password"]))
+		print("user:".$_GET["user"]." password:".$_GET["password"]);
+		print(isset($_GET["user"])." ".isset($_GET["user"])."\n");
+		if ((!isset($_GET["user"]) || !isset($_GET["password"])))
 		{
 		?>
 			<h1 id="title">Login</h1>
 			<section>
-				<form action="members_only.php" method="post" enctype="multipart/form-data">
+				<form action="members_only.php" method="GET" enctype="multipart/form-data">
 					<div class="block">
-						<label>Username:</label>
+						<label>user:</label>
 						<label>Password:</label>
 					</div>
 					<div class="block">
-						<input type="text" name="username" value="username"/>
+						<input type="text" name="user" />
 						<input type="password" name="password" />
 					</div>
 					<input type="submit" name="login" value="Valider"/>
@@ -40,10 +42,10 @@
 		}
 		else
 		{
-			if ($_POST["password"] != "jaimelespetitsponeys")
-				echo "Cette zone est accessible uniquement aux membres du site";
-			else
+			if ($_GET["user"] == "zaz" && $_GET["password"] == "jaimelespetitsponeys")
 				echo "GG";
+			else
+				echo "Cette zone est accessible uniquement aux membres du site";
 		}
 		?>
 	</body>

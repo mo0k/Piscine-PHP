@@ -1,10 +1,17 @@
 #!/usr/bin/php
 <?php
+
 function ft_split($string)
 {
-	$tab = explode(" ", $string);
-	sort($tab);
-	return($tab);
+	$tab = explode(' ', $string);
+	$ret = array();
+	foreach ($tab as $word)
+	{
+		if (isset($word[0]))
+			array_push($ret, $word);
+	}
+	sort($ret);
+	return ($ret);
 }
 
 function is_alpha($str)

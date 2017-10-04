@@ -1,15 +1,21 @@
 #!/usr/bin/php
 <?PHP
 
-function ft_split($str)
+function ft_split($string)
 {
-	return (array_filter(explode(' ', $str)));
+	$tab = explode(' ', $string);
+	$ret = array();
+	foreach ($tab as $word)
+	{
+		if (isset($word[0]))
+			array_push($ret, $word);
+	}
+	return ($ret);
 }
 
 	if ($argc < 2)
 		return ;
 	$tab1 = array();
-	$tab2 = array();
 	$i = 1;
 	while ($i < $argc)
 	{

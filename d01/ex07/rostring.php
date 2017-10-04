@@ -1,9 +1,16 @@
 #!/usr/bin/php
 <?PHP
 
-function ft_split($str)
+function ft_split($string)
 {
-	return (array_values(array_filter(explode(' ', $str))));
+	$tab = explode(' ', $string);
+	$ret = array();
+	foreach ($tab as $word)
+	{
+		if (isset($word[0]))
+			array_push($ret, $word);
+	}
+	return ($ret);
 }
 
 	if ($argc < 2)

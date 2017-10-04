@@ -6,7 +6,7 @@ function ft_is_sort($tab)
 	$temp2 = $tab;
 
 	sort($temp1);
-	asort($temp2);
+	rsort($temp2);
 	if ($temp1 === $tab)
 		return (1);
 	if ($temp2 === $tab)
