@@ -1,6 +1,6 @@
 <?php
 
-//print_r($_SERVER);
+print_r($_SERVER);
 
 if ($_SERVER['PHP_AUTH_USER'] == "zaz" &&
 	$_SERVER['PHP_AUTH_PW'] == "jaimelespetitsponeys")
