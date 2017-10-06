@@ -1,0 +1,334 @@
+#!/bin/bash
+
+port=8081
+day="d04"
+
+echo "START SRCIPT"
+echo ""
+read -n1 -r -p "Press space to start..."
+echo ""
+echo "_________________________EX00_________________________"
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+user="sb"
+pass="beeone"
+submit="OK"
+num_check="EX00 - TEST 1"
+echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo "_______________________________________________"
+echo -e $num_check'\033[32m Connection normal\033[39m'
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Creation session\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php?login='$user'&passwd='$pass'&submit='$submit
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Connection avec cookie\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+curl -v -b cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check'\033[32m Connection normal\033[39m'
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v 'http://localhost:'$port'/'$day'/ex00/index.php'
+#echo 'http://localhost:'$port'/'$day'/ex01/index.php'
+echo ""
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+user="sb"
+pass="beeone"
+submit="O"
+num_check="EX00 - TEST 2"
+echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo "_______________________________________________"
+echo -e $num_check'\033[32m Connection normal\033[39m'
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Creation session\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php?login='$user'&passwd='$pass'&submit='$submit
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Connection avec cookie\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+curl -v -b cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check'\033[32m Connection normal\033[39m'
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v 'http://localhost:'$port'/'$day'/ex00/index.php'
+#echo 'http://localhost:'$port'/'$day'/ex01/index.php'
+echo ""
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+user="sb"
+pass=0
+submit="OK"
+num_check="EX00 - TEST 3"
+echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo "_______________________________________________"
+echo -e $num_check'\033[32m Connection normal\033[39m'
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Creation session\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php?login='$user'&passwd='$pass'&submit='$submit
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Connection avec cookie\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+curl -v -b cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check'\033[32m Connection normal\033[39m'
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v 'http://localhost:'$port'/'$day'/ex00/index.php'
+#echo 'http://localhost:'$port'/'$day'/ex01/index.php'
+echo ""
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+user=0
+pass="beeone"
+submit="OK"
+num_check="EX00 - TEST 4"
+echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo "_______________________________________________"
+echo -e $num_check'\033[32m Connection normal\033[39m'
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Creation session\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php?login='$user'&passwd='$pass'&submit='$submit
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Connection avec cookie\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+curl -v -b cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check'\033[32m Connection normal\033[39m'
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v 'http://localhost:'$port'/'$day'/ex00/index.php'
+#echo 'http://localhost:'$port'/'$day'/ex01/index.php'
+echo ""
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+user=
+pass="beeone"
+submit="OK"
+num_check="EX00 - TEST 5"
+echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo "_______________________________________________"
+echo -e $num_check'\033[32m Connection normal\033[39m'
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Creation session\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php?login='$user'&passwd='$pass'&submit='$submit
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Connection avec cookie\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+curl -v -b cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check'\033[32m Connection normal\033[39m'
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v 'http://localhost:'$port'/'$day'/ex00/index.php'
+#echo 'http://localhost:'$port'/'$day'/ex01/index.php'
+echo ""
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+
+user="sb"
+pass=
+submit="OK"
+num_check="EX00 - TEST 6"
+echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo "_______________________________________________"
+echo -e $num_check'\033[32m Connection normal\033[39m'
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Creation session\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php?login='$user'&passwd='$pass'&submit='$submit
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Connection avec cookie\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+curl -v -b cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+echo "_______________________________________________"
+echo -e $num_check'\033[32m Connection normal\033[39m'
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+curl -v 'http://localhost:'$port'/'$day'/ex00/index.php'
+#echo 'http://localhost:'$port'/'$day'/ex01/index.php'
+echo ""
+echo ""
+echo ""
+read -n1 -r -p "Press space to start..."
+clear
+
+echo "_________________________EX01_________________________"
+
+if [ -f "~/http/Piscines/j04/htdocs/private/passwd" ]; then
+	rm ~/http/Piscines/j04/htdocs/private/passwd
+fi
+
+read -n1 -r -p "Press space to continue..."
+user="sb"
+pass=
+submit="OK"
+num_check="EX01 - TEST 6"
+
+echo ""
+echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
