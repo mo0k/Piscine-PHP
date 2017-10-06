@@ -12,7 +12,7 @@ function do_set($keys, $values, $i)
 	{
 		if (!isset($values[$i]) || !isset($values[$i][0]))
 			return ;
-		setcookie($name, htmlspecialchars($values[$i]), time() + 3600);
+		setcookie($name, $values[$i], time() + 3600);
 	}
 }
 

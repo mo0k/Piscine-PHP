@@ -1,0 +1,196 @@
+#!/bin/bash
+
+echo "START SRCIPT"
+echo ""
+read -n1 -r -p "Press space to start..."
+echo ""
+echo "_________________________EX01_________________________"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+curl 'http://localhost:8100/ex01/phpinfo.php'
+echo ""
+echo "_________________________EX02_________________________"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+echo "TEST 1: 'login=mmontinet'"
+curl 'http://localhost:8100/ex02/print_get.php?login=mmontinet'
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+echo "TEST 2: 'gdb=pied2biche&barry=barreamine'"
+curl 'http://localhost:8100/ex02/print_get.php?gdb=pied2biche&barry=barreamine'
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+echo "TEST 3: 'gdb=0&0=barreamine'"
+curl 'http://localhost:8100/ex02/print_get.php?gdb=0&0=barreamine'
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+echo "TEST 4: 'NULL=0&0=NULL'"
+curl 'http://localhost:8100/ex02/print_get.php?NULL=0&0=NULL'
+echo ""
+echo "_________________________EX03_________________________"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+echo "TEST 1: 'value=choucroute'"
+echo "Creation du cookie => value=choucroute"
+curl -c cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=set&name=plat&value=choucroute'
+echo -e "\033[32mDisplay cookie => value=choucroute\033[39m"
+curl -b cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=get&name=plat'
+echo "Suppression du cookie => value=choucroute"
+curl -c cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=del&name=plat'
+echo -e "\033[31mDisplay cookie => value=choucroute\033[39m"
+curl -b cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=get&name=plat'
+if [ -f cook.txt ]; then
+	rm cook.txt
+else
+	echo -e "\033[31mProbleme cookie non creer0\033[39m"
+fi
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+echo "TEST 2: 'value=0'"
+echo "Creation du cookie => value=0"
+curl -c cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=set&name=plat&value=0'
+echo -e "\033[32mDisplay cookie => value=0\033[39m"
+curl -b cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=get&name=plat'
+echo "Suppression du cookie => value=0"
+curl -c cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=del&name=plat'
+echo -e "\033[31mDisplay cookie => value=0\033[39m"
+curl -b cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=get&name=plat'
+if [ -f cook.txt ]; then
+	rm cook.txt
+else
+	echo -e "\033[31mProbleme cookie non creer0\033[39m"
+fi
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+echo "TEST 3: 'name=0value=coco'"
+echo "Creation du cookie => name=0value=coco"
+curl -c cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=set&name=0&value=coco'
+echo -e "\033[32mDisplay cookie => name=0 et value=coco\033[39m"
+curl -b cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=get&name=0'
+echo "Suppression du cookie => name=0 et value=coco"
+curl -c cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=del&name=0'
+echo -e "\033[31mDisplay cookie => name=0 et value=coco\033[39m"
+curl -b cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=get&name=0'
+if [ -f cook.txt ]; then
+	rm cook.txt
+else
+	echo -e "\033[31mProbleme cookie non creer0\033[39m"
+fi
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+echo "TEST 4: 'wtf=plat&value=coco'"
+echo "Creation du cookie => wtf=plat&value=coco"
+curl -c cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=set&wtf=plat&value=coco'
+echo -e "\033[32mDisplay cookie => wtf=plat&value=coco\033[39m"
+curl -b cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=get&wtf=plat'
+echo "Suppression du cookie => wtf=plat&value=coco"
+curl -c cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=del&wtf=plat'
+echo -e "\033[31mDisplay cookie => wtf=plat&value=coco\033[39m"
+curl -b cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=get&wtf=plat'
+if [ -f cook.txt ]; then
+	echo -e "\033[31mcookie creer => Probleme de key0\033[39m"
+	rm cook.txt
+fi
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+echo "TEST 5: 'name=&value=coco'"
+echo "Creation du cookie => value=coco"
+curl -c cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=set&name=&value=coco'
+echo -e "\033[32mDisplay cookie => value = coco\033[39m"
+curl -b cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=get&name='
+echo "Suppression du cookie => value = coco"
+curl -c cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=del&name='
+echo -e "\033[31mDisplay cookie => value = coco\033[39m"
+curl -b cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=get&name='
+if [ -f cook.txt ]; then
+	echo -e "\033[31mProbleme cookie creer sans name\033[39m"
+	rm cook.txt
+fi
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+echo "TEST 6: 'name=plat&value=\"\"'"
+echo "Creation du cookie => value=\"\""
+curl -c cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=set&name=plat&value=""'
+echo -e "\033[32mDisplay cookie => value=\033[39m"
+curl -b cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=get&name=plat'
+echo "Suppression du cookie => value=\"\""
+curl -c cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=del&name=plat'
+echo -e "\033[31mDisplay cookie => value=\"\"\033[39m"
+curl -b cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=get&name=plat'
+if [ -f cook.txt ]; then
+	rm cook.txt
+else
+	echo -e "\033[31mProbleme cookie non creer0\033[39m"
+fi
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+echo "TEST 7: 'name=plat&value="
+echo "Creation du cookie => value="
+curl -c cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=set&name=plat&value='
+echo -e "\033[32mDisplay cookie => value=\033[39m"
+curl -b cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=get&name=plat'
+echo "Suppression du cookie => value="
+curl -c cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=del&name=plat'
+echo -e "\033[31mDisplay cookie => value=\033[39m"
+curl -b cook.txt 'http://localhost:8100/ex03/cookie_crisp.php?action=get&name=plat'
+if [ -f cook.txt ]; then
+	rm cook.txt
+else
+	echo -e "\033[31mProbleme cookie non creer0\033[39m"
+fi
+echo ""
+echo "_________________________EX04_________________________"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+echo -ne "resultat curl:\033[32m"
+curl 'http://localhost:8100/ex04/raw_text.php'
+echo -e "\033[39mresultat d03 :\033[36m<html><body>Hello</body></html>\033[39m"
+echo ""
+echo "_________________________EX05_________________________"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+curl --head http://localhost:8100/ex05/read_img.php
+echo ""
+echo "_________________________EX06_________________________"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+echo "TEST 1 user=zaz et password=jaimelespetitsponeys"
+sleep 1
+curl --user zaz:jaimelespetitsponeys http://localhost:8100/ex06/members_only.php
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo ""
+echo "TEST 1 user=root et password=root"
+sleep 1
+curl -v --user root:root http://localhost:8100/ex06/members_only.php
