@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change password</title>
+	<style>
+		body{background:#FFFFFF;}
+		#title{color:black;margin:0 auto 20px auto;width:250px;text-align: center;}
+		section{width:420px;margin:auto;}
+		form{width:280px;margin:15px auto;background-color: rgb(102,178,255);border-radius: 10px;border:2px solid black;}
+		div#content{width:280px;margin:0 auto;}
+		div.block{display:inline-block;margin: 5px 0;text-align: right}
+		div.block:first-child{width: 125px;height:40px;}
+		a{text-align:center;width:150px;margin:auto 50px;}
+		hr{margin:50px 0 0 0;}
+		label, input{display:block;clear:both;margin:2px 0;}
+		input[type="submit"]{display:block;margin:5px auto;width:200px;}
+		body p{margin:0;float:right;}
+	</style>
+</head>
+	<body>
+			<h1 id="title">Change password</h1>
+			<section>
+				<form action="create.php" method="POST" enctype="multipart/form-data">
+					<div id="content">
+						<div class="block">
+							<label>Login:</label>
+							<label>Old password:</label>
+							<label>New password:</label>
+						</div>
+						<div class="block">
+							<input type="text" name="login" value=""/>
+							<input type="Password" name="oldwd" value=""/>
+							<input type="Password" name="newpw" value=""/>
+						</div>
+						<input type="submit" name="submit" value="OK"/>
+					</div>
+				</form>
+			</section>
+			<hr/>
+	</body>
+</html>

@@ -320,15 +320,463 @@ clear
 
 echo "_________________________EX01_________________________"
 
-if [ -f "~/http/Piscines/j04/htdocs/private/passwd" ]; then
-	rm ~/http/Piscines/j04/htdocs/private/passwd
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	rm $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
 fi
 
 read -n1 -r -p "Press space to continue..."
-user="sb"
+echo ""
+user="toto1"
+pass="titi1"
+submit="OK"
+num_check="EX01 - TEST 1"
+echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Creation de compte\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo -ne "\033[036m"
+curl -d login=$user -d passwd=$pass -d submit=$submit 'http://localhost:'$port'/'$day'/ex01/create.php'
+echo -ne "\033[039m"
+echo -e "\033[032mOK\033[039m"
+echo ""
+echo -e "Display file /private/passwd\n"
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	more $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+else
+	echo -e "\033[031mProbleme: fichier passwd non existant\033[039m"
+fi
+echo ""
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+user=
+pass="titi1"
+submit="OK"
+num_check="EX01 - TEST 2"
+echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo "" 
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Re-creation de compte\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo -ne "\033[036m"
+curl -d login=$user -d passwd=$pass -d submit=$submit 'http://localhost:'$port'/'$day'/ex01/create.php'
+echo -ne "\033[039m"
+echo -e "\033[032mERROR\033[039m"
+echo ""
+echo -e "Display file /private/passwd\n"
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	more $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+else
+	echo -e "\033[031mProbleme: fichier passwd non existant\033[039m"
+fi
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+user="toto1"
 pass=
 submit="OK"
-num_check="EX01 - TEST 6"
-
-echo ""
+num_check="EX01 - TEST 3"
 echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo "" 
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Re-creation de compte\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo -ne "\033[036m"
+curl -d login=$user -d passwd=$pass -d submit=$submit 'http://localhost:'$port'/'$day'/ex01/create.php'
+echo -ne "\033[039m"
+echo -e "\033[032mERROR\033[039m"
+echo ""
+echo -e "Display file /private/passwd\n"
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	more $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+else
+	echo -e "\033[031mProbleme: fichier passwd non existant\033[039m"
+fi
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+user="toto1"
+pass="titi1"
+submit="KO"
+num_check="EX01 - TEST 4"
+echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo "" 
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Re-creation de compte\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo -ne "\033[036m"
+curl -d login=$user -d passwd=$pass -d submit=$submit 'http://localhost:'$port'/'$day'/ex01/create.php'
+echo -ne "\033[039m"
+echo -e "\033[032mERROR\033[039m"
+echo ""
+echo -e "Display file /private/passwd\n"
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	more $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+else
+	echo -e "\033[031mProbleme: fichier passwd non existant\033[039m"
+fi
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+user="toto1"
+pass="titi1"
+submit=
+num_check="EX01 - TEST 5"
+echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo "" 
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Re-creation de compte\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo -ne "\033[036m"
+curl -d login=$user -d passwd=$pass -d submit=$submit 'http://localhost:'$port'/'$day'/ex01/create.php'
+echo -ne "\033[039m"
+echo -e "\033[032mERROR\033[039m"
+echo ""
+echo -e "Display file /private/passwd\n"
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	more $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+else
+	echo -e "\033[031mProbleme: fichier passwd non existant\033[039m"
+fi
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+user="titi1"
+pass="toto1"
+submit="OK"
+num_check="EX01 - TEST 6"
+echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo "" 
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Re-creation de compte\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo -ne "\033[036m"
+curl -d login=$user -d passwd=$pass -d submit=$submit 'http://localhost:'$port'/'$day'/ex01/create.php'
+echo -ne "\033[039m"
+echo -e "\033[032mOK\033[039m"
+echo ""
+echo -e "Display file /private/passwd\n"
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	more $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+else
+	echo -e "\033[031mProbleme: fichier passwd non existant\033[039m"
+fi
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+<<COMMENT_CURRENT
+if [ -d $HOME"/http/Piscines/htdocs/"$day"/private" ]; then
+	{
+	rm -rf $HOME"/http/Piscines/htdocs/"$day"/private"
+	}
+fi
+
+echo "Suppression de /private/passwd"\n
+echo "Creation d'un repertoire /private/passwd"
+mkdir $HOME"/http/Piscines/htdocs/"$day"/private"
+mkdir $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+
+user="titi1"
+pass="toto1"
+submit="OK"
+num_check="EX01 - TEST 7"
+echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo "" 
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Creation de compte\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo -ne "\033[036m"
+curl -d login=$user -d passwd=$pass -d submit=$submit 'http://localhost:'$port'/'$day'/ex01/create.php'
+echo -ne "\033[039m"
+echo -e "\033[032mOK\033[039m"
+echo ""
+echo -e "Display file /private/passwd\n"
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	more $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+else
+	echo -e "\033[031mProbleme: fichier passwd non existant\033[039m"
+fi
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+COMMENT_CURRENT
+
+echo "_________________________EX02_________________________"
+
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	rm $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+fi
+
+read -n1 -r -p "Press space to continue..."
+echo ""
+user="x"
+pass="21"
+submit="OK"
+num_check="EX02"
+echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Creation de compte\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo -ne "\033[036m"
+curl -d login=$user -d passwd=$pass -d submit=$submit 'http://localhost:'$port'/'$day'/ex01/create.php'
+echo -ne "\033[039m"
+echo -e "\033[032mOK\033[039m"
+echo ""
+echo -e "Display file /private/passwd\n"
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	more $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+else
+	echo -e "\033[031mProbleme: fichier passwd non existant\033[039m"
+fi
+echo ""
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+user="x"
+pass="42"
+oldpass="21"
+submit="OK"
+num_check="EX02 - TEST 1"
+echo -e $num_check" login=\033[32m"$user"\033[39m&old_passwd=\033[32m"$oldpass"\033[39m&new_passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo "password actuel:21"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo "" 
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Change password\033[39m login=\033[32m"$user"\033[39m&old_passwd=\033[32m"$oldpass"\033[39m&new_passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo -ne "\033[036m"
+curl -d login=$user -d oldpw=$oldpass -d newpw=$pass -d submit=$submit 'http://localhost:'$port'/'$day'/ex02/modif.php'
+echo -ne "\033[039m"
+echo -e "\033[032mOK\033[039m"
+echo ""
+echo -e "Display file /private/passwd\n"
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	more $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+else
+	echo -e "\033[031mProbleme: fichier passwd non existant\033[039m"
+fi
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+user="y"
+pass="21"
+oldpass="42"
+submit="OK"
+num_check="EX02 - TEST 2"
+echo -e $num_check" login=\033[32m"$user"\033[39m&old_passwd=\033[32m"$oldpass"\033[39m&new_passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo "password actuel:42"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo "" 
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Change password\033[39m login=\033[32m"$user"\033[39m&old_passwd=\033[32m"$oldpass"\033[39m&new_passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo -ne "\033[036m"
+curl -d login=$user -d oldpw=$oldpass -d newpw=$pass -d submit=$submit 'http://localhost:'$port'/'$day'/ex02/modif.php'
+echo -ne "\033[039m"
+echo -e "\033[032mERROR\033[039m"
+echo ""
+echo -e "Display file /private/passwd\n"
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	more $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+else
+	echo -e "\033[031mProbleme: fichier passwd non existant\033[039m"
+fi
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+user=
+pass="21"
+oldpass="42"
+submit="KO"
+num_check="EX02 - TEST 3"
+echo -e $num_check" login=\033[32m"$user"\033[39m&old_passwd=\033[32m"$oldpass"\033[39m&new_passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo "password actuel:42"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo "" 
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Change password\033[39m login=\033[32m"$user"\033[39m&old_passwd=\033[32m"$oldpass"\033[39m&new_passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo -ne "\033[036m"
+curl -d login=$user -d oldpw=$oldpass -d newpw=$pass -d submit=$submit 'http://localhost:'$port'/'$day'/ex02/modif.php'
+echo -ne "\033[039m"
+echo -e "\033[032mERROR\033[039m"
+echo ""
+echo -e "Display file /private/passwd\n"
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	more $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+else
+	echo -e "\033[031mProbleme: fichier passwd non existant\033[039m"
+fi
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+user="x"
+pass='21'
+oldpass="42"
+submit=
+num_check="EX02 - TEST 4"
+echo -e $num_check" login=\033[32m"$user"\033[39m&old_passwd=\033[32m"$oldpass"\033[39m&new_passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo "password actuel:42"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo "" 
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Change password\033[39m login=\033[32m"$user"\033[39m&old_passwd=\033[32m"$oldpass"\033[39m&new_passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo -ne "\033[036m"
+curl -d login=$user -d oldpw=$oldpass -d newpw=$pass -d submit=$submit 'http://localhost:'$port'/'$day'/ex02/modif.php'
+echo -ne "\033[039m"
+echo -e "\033[032mERROR\033[039m"
+echo ""
+echo -e "Display file /private/passwd\n"
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	more $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+else
+	echo -e "\033[031mProbleme: fichier passwd non existant\033[039m"
+fi
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+user="x"
+pass="42"
+oldpass=
+submit="OK"
+num_check="EX02 - TEST 5"
+echo -e $num_check" login=\033[32m"$user"\033[39m&old_passwd=\033[32m"$oldpass"\033[39m&new_passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo "password actuel:42"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo "" 
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Change password\033[39m login=\033[32m"$user"\033[39m&old_passwd=\033[32m"$oldpass"\033[39m&new_passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo -ne "\033[036m"
+curl -d login=$user -d oldpw=$oldpass -d newpw=$pass -d submit=$submit 'http://localhost:'$port'/'$day'/ex02/modif.php'
+echo -ne "\033[039m"
+echo -e "\033[032mERROR\033[039m"
+echo ""
+echo -e "Display file /private/passwd\n"
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	more $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+else
+	echo -e "\033[031mProbleme: fichier passwd non existant\033[039m"
+fi
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+
+user="x"
+pass=
+oldpass="42"
+submit="OK"
+num_check="EX02 - TEST 6"
+echo -e $num_check" login=\033[32m"$user"\033[39m&old_passwd=\033[32m"$oldpass"\033[39m&new_passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo "password actuel:42"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo "" 
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Change password\033[39m login=\033[32m"$user"\033[39m&old_passwd=\033[32m"$oldpass"\033[39m&new_passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo -ne "\033[036m"
+curl -d login=$user -d oldpw=$oldpass -d newpw=$pass -d submit=$submit 'http://localhost:'$port'/'$day'/ex02/modif.php'
+echo -ne "\033[039m"
+echo -e "\033[032mERROR\033[039m"
+echo ""
+echo -e "Display file /private/passwd\n"
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	more $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+else
+	echo -e "\033[031mProbleme: fichier passwd non existant\033[039m"
+fi
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+user="y"
+pass="-42"
+submit="OK"
+num_check="EX02"
+echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo ""
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Creation d'un deuxieme compte\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo -ne "\033[036m"
+curl -d login=$user -d passwd=$pass -d submit=$submit 'http://localhost:'$port'/'$day'/ex01/create.php'
+echo -ne "\033[039m"
+echo -e "\033[032mOK\033[039m"
+echo ""
+echo -e "Display file /private/passwd\n"
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	more $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+else
+	echo -e "\033[031mProbleme: fichier passwd non existant\033[039m"
+fi
+echo ""
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
+user="y"
+pass="-21"
+oldpass="-42"
+submit="OK"
+num_check="EX02 - TEST 7"
+echo -e $num_check" login=\033[32m"$user"\033[39m&old_passwd=\033[32m"$oldpass"\033[39m&new_passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo "password actuel:-42"
+echo ""
+read -n1 -r -p "Press space to continue..."
+echo "" 
+echo "_______________________________________________"
+echo -e $num_check"\033[32m Change password\033[39m login=\033[32m"$user"\033[39m&old_passwd=\033[32m"$oldpass"\033[39m&new_passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
+echo -ne "\033[036m"
+curl -d login=$user -d oldpw=$oldpass -d newpw=$pass -d submit=$submit 'http://localhost:'$port'/'$day'/ex02/modif.php'
+echo -ne "\033[039m"
+echo -e "\033[032mOK\033[039m"
+echo ""
+echo -e "Display file /private/passwd\n"
+if [ -f $HOME"/http/Piscines/htdocs/"$day"/private/passwd" ]; then
+	more $HOME"/http/Piscines/htdocs/"$day"/private/passwd"
+else
+	echo -e "\033[031mProbleme: fichier passwd non existant\033[039m"
+fi
+echo ""
+echo ""
+read -n1 -r -p "Press space to continue..."
+clear
+
