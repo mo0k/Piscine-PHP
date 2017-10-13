@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+		var index_color = 0;
+
+		window.onload = function () {
+				var ballon = document.getElementById('ballon');
+				ballon.addEventListener("click", gonfler);
+				ballon.addEventListener("mouseleave", degonfler);
+		}
+
+		function get_color(state) {
+			var		colors = ["red", "green", "blue"];
+			if (state === true)
+				index_color = index_color == 2 ? 0 : index_color + 1;
+			else
+				index_color = index_color == 0 ? 2 : index_color - 1;
+			console.log(index_color)
+			return(colors[index_color]);
+		}
+
+		function set_dimension(object, dimension) {
+			if (dimension < 200 || dimension > 420)
+				dimension = 200;
+			object.style.width = dimension + "px";
+			object.style.height = dimension + "px";
+		}
+
+		function	gonfler() {
+			var 	ballon = document.getElementById('ballon');
+			var 	color;
+			set_dimension(ballon, ballon.offsetWidth + 10)
+			ballon.style.backgroundColor = get_color(true);
+		}
+
+		function	degonfler() {
+			var 	ballon = document.getElementById('ballon');
+			var 	color;
+			set_dimension(ballon, ballon.offsetWidth - 5);
+			ballon.style.backgroundColor = get_color(false);
+
+		}
+		</script>
+		<link rel="stylesheet" type="text/css" href="theme.css">
+		<title>Title of the document</title>
+	</head>
+	<body>
+		<div id="ballon">
+
+		</div>
+	</body>
+</html>
