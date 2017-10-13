@@ -41,13 +41,13 @@ function		add_account($username, $passwd, $accounts)
 
 if ($_POST["submit"] == "OK")
 {
-	if ($_POST["login"] = "" || $_POST["login"][0] == "" ||
-		$_POST["passwd"] = "" || $_POST["passwd"][0] == "")
+	if ($_POST["login"] == "" || $_POST["login"][0] == "" ||
+		$_POST["passwd"] == "" || $_POST["passwd"][0] == "")
 		return (exit_prog("ERROR\n"));
 	if (do_path("../private") === FALSE)
-		return ;
+		return (exit_prog("ERROR\n"));
 	if (($datafile = file_get_contents("../private/passwd")) === FALSE)
-		return ;
+		return (exit_prog("ERROR\n"));
 	$temp = unserialize($datafile);
 	if (add_account($_POST["login"], $_POST["passwd"], ($temp === FALSE) ? array() : $temp) === FALSE)
 		return (exit_prog("ERROR\n"));

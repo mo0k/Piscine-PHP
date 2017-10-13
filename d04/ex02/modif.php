@@ -8,11 +8,11 @@ function exit_prog($value)
 
 function		do_path($path)
 {
-	if (file_exists($path) === FALSE
-		&& mkdir($path) === FALSE)
-		return (FALSE);
-	if (file_exists($path."/passwd") === FALSE
-		&& file_put_contents($path."/passwd", NULL) === FALSE)
+	//if (file_exists($path) === FALSE
+	//	&& mkdir($path) === FALSE)
+	//	return (FALSE);
+	//if (file_exists($path."/passwd") === FALSE
+	if(file_put_contents($path."/passwd", NULL, FILE_APPEND) === FALSE)
 		return (FALSE);
 	return (TRUE);
 }

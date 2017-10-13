@@ -8,11 +8,12 @@ function exit_prog($value)
 
 function		do_path($path)
 {
-	if (file_exists($path) === FALSE
-		&& mkdir($path) === FALSE)
-		return (FALSE);
-	if (file_exists($path."/passwd") === FALSE
-		&& file_put_contents($path."/passwd", NULL) === FALSE)
+	//if (file_exists($path) === FALSE
+	//	&& mkdir($path) === FALSE)
+	//	return (FALSE);
+	//if (file_exists($path."/passwd") === FALSE
+	//	&& file_put_contents($path."/passwd", NULL) === FALSE)
+	if (file_put_contents($path, NULL, FILE_APPEND) === FALSE)
 		return (FALSE);
 	return (TRUE);
 }
@@ -26,9 +27,11 @@ function		check_account($username, $passwd, $accounts)
 	}
 	foreach ($accounts as $account)
 	{
-		if ($account["login"] == $username)
-		 	$account["passwd"] = hash("whirlpool", $passwd);
+		if ($account["login"] == $username &&
+		 	$account["passwd"] == hash("whirlpool", $passwd))
+		 {
 			return (TRUE);
+		 }
 	}
 	return (FALSE);
 }
@@ -38,7 +41,7 @@ function auth($login, $passwd)
 	if ($login == "" || $login[0] == "" ||
 		$passwd == "" || $passwd[0] == "")
 		return (FALSE);
-	if (do_path("../private") === FALSE)
+	if (do_path("../private/passwd") === FALSE)
 		return (FALSE);
 	if (($datafile = file_get_contents("../private/passwd")) === FALSE)
 		return (FALSE);

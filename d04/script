@@ -19,16 +19,6 @@ echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m
 read -n1 -r -p "Press space to continue..."
 echo ""
 echo "_______________________________________________"
-echo -e $num_check'\033[32m Connection normal\033[39m'
-echo ""
-read -n1 -r -p "Press space to continue..."
-echo ""
-curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
-echo ""
-echo ""
-read -n1 -r -p "Press space to continue..."
-clear
-echo "_______________________________________________"
 echo -e $num_check"\033[32m Creation session\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
 echo ""
 read -n1 -r -p "Press space to continue..."
@@ -69,16 +59,6 @@ num_check="EX00 - TEST 2"
 echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
 read -n1 -r -p "Press space to continue..."
 echo ""
-echo "_______________________________________________"
-echo -e $num_check'\033[32m Connection normal\033[39m'
-echo ""
-read -n1 -r -p "Press space to continue..."
-echo ""
-curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
-echo ""
-echo ""
-read -n1 -r -p "Press space to continue..."
-clear
 echo "_______________________________________________"
 echo -e $num_check"\033[32m Creation session\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
 echo ""
@@ -121,16 +101,6 @@ echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m
 read -n1 -r -p "Press space to continue..."
 echo ""
 echo "_______________________________________________"
-echo -e $num_check'\033[32m Connection normal\033[39m'
-echo ""
-read -n1 -r -p "Press space to continue..."
-echo ""
-curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
-echo ""
-echo ""
-read -n1 -r -p "Press space to continue..."
-clear
-echo "_______________________________________________"
 echo -e $num_check"\033[32m Creation session\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
 echo ""
 read -n1 -r -p "Press space to continue..."
@@ -171,16 +141,6 @@ num_check="EX00 - TEST 4"
 echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
 read -n1 -r -p "Press space to continue..."
 echo ""
-echo "_______________________________________________"
-echo -e $num_check'\033[32m Connection normal\033[39m'
-echo ""
-read -n1 -r -p "Press space to continue..."
-echo ""
-curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
-echo ""
-echo ""
-read -n1 -r -p "Press space to continue..."
-clear
 echo "_______________________________________________"
 echo -e $num_check"\033[32m Creation session\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
 echo ""
@@ -223,16 +183,6 @@ echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m
 read -n1 -r -p "Press space to continue..."
 echo ""
 echo "_______________________________________________"
-echo -e $num_check'\033[32m Connection normal\033[39m'
-echo ""
-read -n1 -r -p "Press space to continue..."
-echo ""
-curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
-echo ""
-echo ""
-read -n1 -r -p "Press space to continue..."
-clear
-echo "_______________________________________________"
 echo -e $num_check"\033[32m Creation session\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
 echo ""
 read -n1 -r -p "Press space to continue..."
@@ -274,16 +224,6 @@ num_check="EX00 - TEST 6"
 echo -e $num_check" login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
 read -n1 -r -p "Press space to continue..."
 echo ""
-echo "_______________________________________________"
-echo -e $num_check'\033[32m Connection normal\033[39m'
-echo ""
-read -n1 -r -p "Press space to continue..."
-echo ""
-curl -v -c cook.txt 'http://localhost:'$port'/'$day'/ex00/index.php'
-echo ""
-echo ""
-read -n1 -r -p "Press space to continue..."
-clear
 echo "_______________________________________________"
 echo -e $num_check"\033[32m Creation session\033[39m login=\033[32m"$user"\033[39m&passwd=\033[32m"$pass"\033[39m&submit=\033[32m"$submit"\033[39m"
 echo ""
